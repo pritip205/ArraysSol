@@ -1,0 +1,19 @@
+class Solution {
+public:
+    vector<int> getConcatenation(vector<int>& nums) {
+        int n = nums.size();  // Use .size() for vector size
+        vector<int> ans(2 * n);  // Create a vector with double the size
+
+        // Copy the first part of nums into ans
+        for (int i = 0; i < n; i++) {
+            ans[i] = nums[i];
+        }
+        
+        // Copy the second part of nums into ans
+        for (int i = 0; i < n; i++) {
+            ans[i + n] = nums[i];
+        }
+
+        return ans;  // Return the concatenated vector
+    }
+};
