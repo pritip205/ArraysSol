@@ -1,0 +1,14 @@
+class Solution {
+public:
+    string restoreString(string s, vector<int>& indices) {
+        vector<char> suffered(s.size());  
+    
+       
+        for (int i = 0; i < s.size(); i++) {
+            suffered[indices[i]] = s[i];
+        }
+
+      
+        return string(suffered.begin(), suffered.end());
+    }
+};
